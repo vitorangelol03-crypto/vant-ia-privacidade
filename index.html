@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — Vant IA · Anexador de Notas</title>
+<meta name="description" content="Política de Privacidade da extensão Vant IA - Anexador de Notas (Shopee).">
+<style>
+  :root{
+    --navy:#0b1526; --nota:#5925dc; --fg:#1d2433; --muted:#475467;
+    --bg:#f5f6f8; --card:#ffffff; --linha:#e4e7ec;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:780px; margin:0 auto; padding:40px 20px 80px;}
+  header{border-bottom:1px solid var(--linha); padding-bottom:22px; margin-bottom:10px;}
+  .marca{font-weight:700; font-size:20px; color:var(--nota); letter-spacing:-.01em;}
+  h1{font-size:30px; line-height:1.2; color:var(--navy); margin:16px 0 6px;}
+  .data{color:var(--muted); font-size:14px; margin:0;}
+  .resumo{background:var(--card); border:1px solid var(--linha); border-radius:14px;
+    padding:18px 20px; margin:26px 0; color:var(--muted);}
+  .resumo b{color:var(--fg);}
+  h2{font-size:19px; color:var(--navy); margin:34px 0 8px;}
+  p,li{color:var(--fg);}
+  ul{padding-left:22px;}
+  li{margin:8px 0;}
+  .sub{color:var(--muted);}
+  code{background:#eef0f4; padding:1px 6px; border-radius:6px; font-size:.92em;}
+  a{color:var(--nota);}
+  footer{margin-top:48px; padding-top:20px; border-top:1px solid var(--linha);
+    color:var(--muted); font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="marca">Vant IA</div>
+    <h1>Política de Privacidade — Anexador de Notas (Shopee)</h1>
+    <p class="data">Última atualização: 20 de outubro de 2026</p>
+  </header>
+
+  <div class="resumo">
+    <b>Em resumo:</b> a extensão <b>“Vant IA - Anexador de Notas”</b> ajuda transportadoras
+    parceiras da Shopee a preencher em massa o portal “Acompanhamento de Notas Fiscais”.
+    Ela trata dados <b>apenas para essa finalidade</b>. <b>Não vendemos seus dados</b> e não os
+    usamos para publicidade nem para avaliar crédito.
+  </div>
+
+  <h2>1. Sobre a extensão</h2>
+  <p>A extensão é uma ferramenta para clientes da Vant IA. Ela exige <b>login na sua conta Vant IA</b>
+  e funciona somente nas páginas do portal da Shopee “Acompanhamento de Notas Fiscais” (um aplicativo
+  hospedado no Google Apps Script). Sem o login, a extensão não funciona.</p>
+
+  <h2>2. Dados que a extensão trata</h2>
+  <ul>
+    <li><b>Login (autenticação).</b> Ao entrar, seu e-mail e sua senha são enviados ao nosso serviço de
+    login para autenticar você. <b>A senha nunca é guardada.</b> No seu navegador ficam guardados apenas
+    os tokens de acesso e de renovação e o seu e-mail (para mostrar quem está logado).</li>
+
+    <li><b>Conteúdo das notas fiscais.</b> Para cada linha do PR, a extensão trata os dados da nota
+    (CNPJ do tomador, valor, número, data de emissão e demais campos do documento) para preencher e
+    anexar a nota correta.
+      <ul>
+        <li>Quando o arquivo é de um formato que a extensão reconhece, ele é lido
+        <b>localmente, no seu navegador</b> — o conteúdo não sai do seu computador.</li>
+        <li>Quando o arquivo é de um formato desconhecido, o conteúdo é enviado ao nosso servidor e a um
+        serviço de identificação (a <b>Anthropic</b>, provedora da inteligência artificial “Claude”)
+        <b>apenas para identificar</b> o documento.</li>
+      </ul>
+    </li>
+
+    <li><b>Dados do portal.</b> A extensão lê a tabela do PR (CNPJ, valor) para casar cada nota com a
+    linha certa; o código do PR é usado para buscar, no sistema Vant IA, os documentos (PDF e XML)
+    correspondentes.</li>
+
+    <li><b>Progresso local.</b> A extensão guarda no seu navegador o progresso de cada PR (quais linhas
+    já foram feitas), para você poder fechar e retomar. Esses dados ficam <b>só no seu dispositivo</b>.</li>
+  </ul>
+
+  <p class="sub">As permissões que a extensão pede — armazenamento local (<code>storage</code> e
+  <code>unlimitedStorage</code>), acesso à aba ativa (<code>activeTab</code>) e acesso aos endereços do
+  portal da Shopee e do sistema Vant IA — existem exclusivamente para o descrito acima.</p>
+
+  <h2>3. Para que usamos</h2>
+  <p>Usamos esses dados <b>exclusivamente</b> para a finalidade única da extensão: preencher o portal da
+  Shopee e anexar as notas corretas em cada linha. Não usamos seus dados para nenhuma outra finalidade.</p>
+
+  <h2>4. Com quem compartilhamos</h2>
+  <p><b>Não vendemos seus dados</b> e não os transferimos a terceiros fora do necessário para a extensão
+  funcionar. Especificamente:</p>
+  <ul>
+    <li>O conteúdo de arquivos de formato desconhecido é processado pela <b>Anthropic (Claude)</b>,
+    como provedora de serviço, <b>apenas para identificar</b> o documento.</li>
+    <li>A autenticação e a infraestrutura usam o <b>Supabase</b> como provedor.</li>
+  </ul>
+
+  <h2>5. Onde os dados ficam e por quanto tempo</h2>
+  <p>Os tokens de login e o progresso ficam <b>no seu dispositivo</b> (armazenamento local do navegador)
+  até você sair do login, limpar os dados do navegador ou desinstalar a extensão. No servidor, o
+  processamento de identificação é <b>transitório</b>; podemos guardar o resultado da identificação de um
+  arquivo (vinculado a um identificador do próprio arquivo) para não reprocessá-lo.</p>
+
+  <h2>6. Segurança</h2>
+  <p>As comunicações usam HTTPS. Os tokens de login ficam no armazenamento da extensão e <b>nunca são
+  expostos</b> às páginas que você visita.</p>
+
+  <h2>7. Seus controles</h2>
+  <p>A qualquer momento você pode sair do login (o que apaga os tokens do navegador), limpar os dados do
+  navegador ou desinstalar a extensão.</p>
+
+  <h2>8. Alterações nesta política</h2>
+  <p>Podemos atualizar esta política. A data de “Última atualização”, no topo, indica a versão vigente.</p>
+
+  <h2>9. Contato</h2>
+  <p>Dúvidas sobre privacidade: <a href="mailto:adm@vant-ia.com">adm@vant-ia.com</a>.</p>
+
+  <footer>Vant IA — Anexador de Notas (Shopee). Esta política refere-se exclusivamente a esta extensão.</footer>
+</div>
+</body>
+</html>
